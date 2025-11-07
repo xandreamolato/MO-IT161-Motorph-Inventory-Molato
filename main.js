@@ -1,10 +1,8 @@
-/* =====================================================
-   Atelier Luxury - Main Script
-   Author: Xandrea Molato
-   Description: Handles basic interactivity and form validation
-   ===================================================== */
+// ----------------------------
+// Atelier Luxury — Main JS
+// ----------------------------
 
-// Smooth scrolling for nav links
+// Smooth scrolling for navbar links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -18,7 +16,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Contact form validation
+// Contact Form Validation and Feedback
 const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
@@ -30,36 +28,40 @@ if (contactForm) {
     const message = document.getElementById("message").value.trim();
     const feedback = document.getElementById("formFeedback");
 
-    // Basic field validation
+    // Clear previous feedback
+    feedback.textContent = "";
+    feedback.className = "";
+
+    // Field validation
     if (!name || !email || !message) {
-      feedback.textContent = "Please fill out all fields before submitting.";
+      feedback.textContent = "Please complete all fields before submitting.";
       feedback.className = "alert alert-warning mt-3";
       return;
     }
 
-    // Basic email validation
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // Basic email format validation
+    const emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
     if (!emailPattern.test(email)) {
       feedback.textContent = "Please enter a valid email address.";
       feedback.className = "alert alert-danger mt-3";
       return;
     }
 
-    // Simulate successful form submission
-    feedback.textContent = "Thank you for reaching out! We’ll get back to you soon.";
+    // Simulated success message (no backend)
+    feedback.textContent = "Thank you for your inquiry. We’ll respond within 48 hours.";
     feedback.className = "alert alert-success mt-3";
 
-    // Clear form fields
+    // Reset form
     contactForm.reset();
   });
 }
 
-// Navbar color change on scroll
+// Navbar behavior on scroll (adds background & shadow)
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");
   if (window.scrollY > 50) {
-    navbar.classList.add("shadow-sm", "bg-white");
+    navbar.classList.add("navbar-scrolled");
   } else {
-    navbar.classList.remove("shadow-sm", "bg-white");
+    navbar.classList.remove("navbar-scrolled");
   }
 });
