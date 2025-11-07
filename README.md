@@ -1,24 +1,25 @@
-# MO-IT161-Motorph-Inventory-Molato
-MotorPH Inventory is a simple web-based inventory management interface designed to help users **track, manage, and view product stocks** efficiently. 
+# Atelier Luxury (atelier-luxury)
+
+**Atelier Luxury** is a minimalist, elegant product showcase built as a front-end project for a Web Systems & Technology course.  
+This MS1 deliverable demonstrates the HTML + CSS template (wireframe → static implementation) and prepares the project for later JavaScript and Bootstrap integration.
 
 ---
 
-## Features
-
-- **Inventory Table** — Displays product information (ID, name, category, quantity, price) in a clean layout.  
-- **Add Product Form** — Simple form interface to add new items to the inventory.  
-- **Responsive Navigation** — Clean header with navigation links.  
-- **Modern UI** — Uses a neat and responsive design for a professional look.
-
----
-
-## Tech Stack
-
-- **HTML5**
-- **CSS3**
-
-No frameworks or external libraries are required — this project runs entirely in the browser.
+## Project summary
+A clean, responsive landing site that highlights curated luxury fashion pieces. Designed to show:
+- semantic HTML structure
+- responsive, accessible CSS styling
+- modular folder structure for future expansion
 
 ---
 
-## Project Structure
+## What to find here
+atelier-luxury/
+├── index.html
+├── README.md
+├── styles/
+│   └── style.css
+├── scripts/
+│   └── main.js
+└── images/
+└── logo.png, hero.jpg, bag1.jpg, bag2.jpg (placeholders)
