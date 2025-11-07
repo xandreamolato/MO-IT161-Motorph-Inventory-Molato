@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Atelier Luxury — Timeless Pieces</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="styles/style.css" />
+
+  <!-- meta for nicer sharing -->
+  <meta name="description" content="Atelier Luxury — curated, timeless fashion pieces. A minimalist, elegant product showcase built with HTML & CSS." />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <!-- replace with images/logo in images/logo.png -->
+        <img src="images/logo.png" alt="Atelier Luxury logo" class="logo" onerror="this.style.display='none'">
+        <a href="#" class="brand-text">Atelier Luxury</a>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#collection" class="nav-link">Collection</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>Timeless styling. Authentic pieces.</h1>
+        <p class="lead">Discover curated luxury fashion inspired by craftsmanship and refined living.</p>
+        <a href="#collection" class="btn-cta">Explore Collection</a>
+      </div>
+      <div class="hero-image">
+        <img src="images/hero.jpg" alt="Luxury handbag on display" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED COLLECTION -->
+  <section id="collection" class="collection">
+    <div class="container">
+      <h2 class="section-title">Featured Collection</h2>
+      <p class="section-sub">Selected pieces that reflect our timeless aesthetic.</p>
+
+      <div class="grid">
+        <article class="card">
+          <img src="images/bag1.jpg" alt="Classic leather handbag" class="card-img" onerror="this.style.display='none'">
+          <div class="card-body">
+            <h3 class="card-title">Classic Leather Tote</h3>
+            <p class="card-text">Hand-stitched Italian leather, minimal hardware — a timeless everyday companion.</p>
+            <div class="card-meta">
+              <span class="price">₱28,000</span>
+              <a class="btn-outline" href="#contact">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/bag2.jpg" alt="Elegant evening clutch" class="card-img" onerror="this.style.display='none'">
+          <div class="card-body">
+            <h3 class="card-title">Evening Clutch — Serpenti</h3>
+            <p class="card-text">Limited edition. Sculptural silhouette and delicate finish for special evenings.</p>
+            <div class="card-meta">
+              <span class="price">₱45,000</span>
+              <a class="btn-outline" href="#contact">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- You can duplicate cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">About Atelier Luxury</h2>
+      <p class="section-sub">Atelier Luxury curates refined pieces with a focus on craftsmanship and authentic materials. Our selections are chosen to complement a life of understated elegance.</p>
+      <ul class="features-list">
+        <li>Curated Collections</li>
+        <li>Focus on Craftsmanship</li>
+        <li>Limited Releases & Pre-orders</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT / INQUIRY -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Contact & Inquiries</h2>
+      <p class="section-sub">Interested in a piece or request? Send us a message and we’ll follow up within 48 hours.</p>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required placeholder="Your full name">
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com">
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Which piece are you inquiring about?"></textarea>
+        </div>
+
+        <div class="form-row form-actions">
+          <button type="submit" class="btn-cta small">Send Inquiry</button>
+          <button type="reset" class="btn-outline small">Clear</button>
+        </div>
+
+        <p class="form-note">This form is a UI placeholder — no server required for Milestone 1.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Atelier Luxury. All rights reserved.</p>
+      <div class="socials">
+        <!-- placeholders, replace with icons if you want -->
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Placeholder script -->
+  <script src="scripts/main.js"></script>
+</body>
+</html>
