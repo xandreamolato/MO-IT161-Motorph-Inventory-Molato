@@ -1,7 +1,7 @@
 # Atelier Luxury (atelier-luxury)
 
 **Atelier Luxury** is a minimalist, elegant product showcase built as a front-end project for a Web Systems & Technology course.  
-This MS1 deliverable demonstrates the HTML + CSS template (wireframe → static implementation) and prepares the project for later JavaScript and Bootstrap integration.
+This project deliverable demonstrates the HTML + CSS template (wireframe → static implementation) and prepares the project for later JavaScript and Bootstrap integration.
 
 ---
 
