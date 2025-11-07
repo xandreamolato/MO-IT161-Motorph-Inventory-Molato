@@ -1,413 +1,162 @@
-/* =========================================
-   Atelier Luxury - Stylesheet
-   Elegant, minimalist design system
-   ========================================= */
+/* =====================================================
+   Atelier Luxury - Custom Styles
+   Author: Xandrea Molato
+   Description: Minimal, elegant, and timeless styling
+   ===================================================== */
 
-/* --------- Base Styles --------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+/* FONT & BASE SETTINGS */
 body {
-  font-family: "Inter", sans-serif;
-  color: #222;
+  font-family: 'Inter', sans-serif;
   background-color: #fff;
+  color: #333;
   line-height: 1.6;
 }
 
-/* Containers */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
 }
 
-/* Typography */
-h1, h2, h3, h4, h5 {
-  font-family: "Playfair Display", serif;
-  color: #111;
-  font-weight: 700;
-}
-
-h1 {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 0.75rem;
+h1, h2 {
+  color: #1a1a1a;
 }
 
 p {
-  font-size: 1rem;
-  color: #444;
   margin-bottom: 1rem;
 }
 
-/* Buttons */
-.btn-cta,
-.btn-outline {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
+/* NAVBAR */
+.navbar {
   font-size: 0.95rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
+  padding: 0.8rem 0;
+  transition: background-color 0.3s ease;
 }
 
-.btn-cta {
-  background-color: #111;
-  color: #fff;
-  border: none;
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #1a1a1a !important;
+  letter-spacing: 0.5px;
 }
 
-.btn-cta:hover {
-  background-color: #333;
-}
-
-.btn-outline {
-  border: 1px solid #111;
-  color: #111;
-  background: transparent;
-}
-
-.btn-outline:hover {
-  background-color: #111;
-  color: #fff;
-}
-
-.btn-cta.small,
-.btn-outline.small {
-  padding: 0.5rem 1rem;
-  font-size: 0.85rem;
-}
-
-/* --------- Header --------- */
-.site-header {
-  background-color: #fff;
-  border-bottom: 1px solid #eee;
-  padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  height: 40px;
-  width: auto;
-  margin-right: 10px;
-}
-
-.brand-text {
-  font-family: "Playfair Display", serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #111;
-  text-decoration: none;
-}
-
-.main-nav {
-  display: flex;
-  gap: 1.25rem;
-}
-
-.nav-link {
-  color: #444;
-  text-decoration: none;
+.navbar-nav .nav-link {
+  color: #333 !important;
+  margin-left: 1rem;
   font-weight: 500;
-  transition: color 0.3s;
 }
 
-.nav-link:hover {
-  color: #111;
+.navbar-nav .nav-link:hover {
+  color: #000 !important;
+  text-decoration: underline;
 }
 
-/* --------- Hero Section --------- */
-.hero {
-  display: flex;
-  align-items: center;
-  padding: 4rem 0;
+/* HERO SECTION */
+#home {
   background-color: #fafafa;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
-.hero-inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
+#home h1 {
+  font-size: 2.5rem;
 }
 
-.hero-copy {
-  flex: 1;
-  min-width: 280px;
+#home .lead {
+  font-weight: 300;
+  color: #555;
 }
 
-.hero-copy .lead {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+#home img {
+  border-radius: 1rem;
+  max-height: 450px;
+  object-fit: cover;
 }
 
-.hero-image img {
-  width: 100%;
-  max-width: 480px;
-  border-radius: 10px;
-}
-
-/* Greeting text dynamically added by JS */
-.greeting-text {
-  margin-top: 1rem;
-  font-style: italic;
-  color: #666;
-}
-
-/* --------- Collection Section --------- */
-.collection {
-  padding: 4rem 0;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.section-sub {
-  color: #666;
-  margin-bottom: 2.5rem;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
+/* COLLECTION CARDS */
 .card {
-  background-color: #fff;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 1rem;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-}
-
-.card-img {
-  width: 100%;
-  height: auto;
-}
-
-.card-body {
-  padding: 1.5rem;
-  text-align: left;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .card-title {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #1a1a1a;
 }
 
 .card-text {
   font-size: 0.95rem;
   color: #555;
-  margin-bottom: 1rem;
 }
 
-.card-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.price {
-  font-weight: bold;
-  font-size: 1rem;
-  color: #111;
-}
-
-/* --------- About Section --------- */
-.about {
-  background-color: #f8f8f8;
-  padding: 4rem 0;
-  text-align: center;
-}
-
-.features-list {
-  list-style: none;
-  margin-top: 2rem;
-}
-
-.features-list li {
-  margin: 0.5rem 0;
-  font-size: 1rem;
-  color: #444;
-}
-
-/* --------- Contact Section --------- */
-.contact {
-  padding: 4rem 0;
-}
-
-.contact-form {
-  max-width: 500px;
-  margin: 2rem auto 0;
+/* ABOUT SECTION */
+#about {
   background-color: #fff;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  padding: 2rem;
 }
 
-.form-row {
-  margin-bottom: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+#about .border {
+  border-color: #e5e5e5 !important;
 }
 
-.form-row label {
+/* CONTACT SECTION */
+#contact label {
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  color: #1a1a1a;
 }
 
-.form-row input,
-.form-row textarea {
-  width: 100%;
+#contact .form-control {
+  border-radius: 0.6rem;
   padding: 0.75rem;
-  border-radius: 6px;
   border: 1px solid #ccc;
-  font-size: 1rem;
-  transition: border-color 0.3s;
 }
 
-.form-row input:focus,
-.form-row textarea:focus {
-  border-color: #111;
-  outline: none;
+#contact .btn {
+  border-radius: 2rem;
+  padding: 0.5rem 1.5rem;
 }
 
-.form-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
-}
-
-.form-note {
-  font-size: 0.85rem;
-  color: #777;
-  margin-top: 1rem;
-  text-align: center;
-}
-
-/* --------- Footer --------- */
-.site-footer {
-  background-color: #111;
-  color: #fff;
-  padding: 2rem 0;
-  text-align: center;
-}
-
-.footer-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-}
-
-.footer-inner a {
-  color: #d4af37;
-  text-decoration: none;
-  margin: 0 0.5rem;
-}
-
-.footer-inner a:hover {
-  text-decoration: underline;
-}
-
-/* --------- Dark Mode --------- */
-body.dark-mode {
+/* FOOTER */
+footer {
   background-color: #1a1a1a;
   color: #f5f5f5;
+  font-size: 0.9rem;
 }
 
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3 {
-  color: #f5f5f5;
+footer a {
+  color: #d4d4d4;
+  text-decoration: none;
 }
 
-body.dark-mode .card {
-  background-color: #2a2a2a;
-  border-color: #333;
+footer a:hover {
+  color: #fff;
 }
 
-body.dark-mode .about {
-  background-color: #222;
+/* UTILITIES */
+section {
+  scroll-margin-top: 80px;
 }
 
-body.dark-mode .contact-form {
-  background-color: #2a2a2a;
-  border-color: #333;
+img {
+  width: 100%;
+  height: auto;
 }
 
-body.dark-mode .btn-outline {
-  border-color: #d4af37;
-  color: #d4af37;
-}
-
-body.dark-mode .btn-outline:hover {
-  background-color: #d4af37;
-  color: #111;
-}
-
-body.dark-mode .btn-cta {
-  background-color: #d4af37;
-  color: #111;
-}
-
-body.dark-mode .btn-cta:hover {
-  background-color: #f0d98a;
-}
-
-body.dark-mode .footer-inner a {
-  color: #f0d98a;
-}
-
-body.dark-mode .site-footer {
-  background-color: #000;
-  color: #f0d98a;
-}
-
-/* --------- Responsive Adjustments --------- */
+/* RESPONSIVE TWEAKS */
 @media (max-width: 768px) {
-  .hero-inner {
-    flex-direction: column;
-    text-align: center;
+  #home h1 {
+    font-size: 2rem;
   }
 
-  .main-nav {
-    flex-wrap: wrap;
-    justify-content: center;
+  .navbar-brand {
+    font-size: 1.2rem;
   }
 
-  .form-actions {
-    flex-direction: column;
-    align-items: stretch;
+  .btn {
+    font-size: 0.9rem;
   }
 }
