@@ -143,11 +143,20 @@
           <button type="submit" class="btn btn-dark">Send Inquiry</button>
           <button type="reset" class="btn btn-outline-dark">Clear</button>
         </div>
-
-        <p class="form-text mt-3 text-center text-muted">This form is a UI placeholder — no server required for Milestone 1.</p>
       </form>
     </div>
   </section>
+
+  <!-- SUCCESS MODAL -->
+  <div class="modal fade" id="inquiryModal" tabindex="-1" aria-labelledby="inquiryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center p-4">
+        <h5 id="inquiryModalLabel" class="mb-3 fw-bold">Inquiry Sent Successfully</h5>
+        <p class="text-muted mb-3">Thank you for reaching out. We’ll get back to you within 48 hours.</p>
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="py-4 bg-dark text-light">
