@@ -1,22 +1,43 @@
-// main.js — placeholder for future Milestone 2 JS.
-// For MS1 we only provide a tiny enhancement: prevent default submit and show a small confirmation message.
+// scripts/main.js
 
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('contactForm');
-  if (!form) return;
+// --- 1. Function + DOM Manipulation ---
+// Display a greeting when the page loads
+function showGreeting() {
+  const heroSection = document.querySelector('.hero-inner');
+  const greeting = document.createElement('p');
+  greeting.textContent = "Welcome to Atelier Luxury — explore timeless style.";
+  greeting.classList.add('greeting-text');
+  heroSection.appendChild(greeting);
+}
 
-  form.addEventListener('submit', function (evt) {
-    evt.preventDefault(); // UI placeholder — no backend for Milestone 1
-    // Simple visual feedback (temporary)
-    const btn = form.querySelector('button[type="submit"]');
-    if (btn) {
-      btn.textContent = 'Sent ✓';
-      btn.disabled = true;
-      setTimeout(() => {
-        btn.textContent = 'Send Inquiry';
-        btn.disabled = false;
-        form.reset();
-      }, 1600);
-    }
+document.addEventListener('DOMContentLoaded', showGreeting);
+
+
+// --- 2. Event Handling ---
+// Handle form submission
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // prevent actual submission
+    const name = document.getElementById('name').value;
+    alert(`Thank you, ${name}! Your inquiry has been received.`);
+    contactForm.reset();
   });
+}
+
+
+// --- 3. DOM Manipulation + Event Handling ---
+// Toggle dark mode theme
+const themeToggle = document.getElementById('themeToggle');
+
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+
+  const footerText = document.getElementById('footerText');
+  if (document.body.classList.contains('dark-mode')) {
+    footerText.textContent = "Dark Mode: On — Embrace the elegance of contrast.";
+  } else {
+    footerText.textContent = "© 2025 Atelier Luxury. All rights reserved.";
+  }
 });
