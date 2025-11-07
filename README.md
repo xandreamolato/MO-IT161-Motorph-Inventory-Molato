@@ -1,7 +1,7 @@
 # Atelier Luxury — Interactive Website
 ---
 
-## 🖋️ Project Overview
+## Project Overview
 
 **Atelier Luxury** is a minimalist fashion and lifestyle website that showcases curated, timeless pieces inspired by craftsmanship and refined living.  
 This project demonstrates modern front-end web development using **HTML**, **CSS**, **JavaScript (DOM Manipulation)**, and **Bootstrap 5** to create a responsive and elegant interface.
@@ -14,7 +14,7 @@ The website highlights:
 
 ---
 
-## 🧩 Features and Functionalities
+## Features and Functionalities
 
 ### 1. **Responsive Navigation Bar**
 - Implemented using Bootstrap’s navbar component  
@@ -47,7 +47,7 @@ The website highlights:
 
 ---
 
-## ⚙️ Technologies Used
+## Technologies Used
 
 | Category | Technology |
 |-----------|-------------|
@@ -59,7 +59,7 @@ The website highlights:
 
 ---
 
-## 🧠 JavaScript Functionality Overview
+## JavaScript Functionality Overview
 
 | Feature | Description |
 |----------|-------------|
@@ -71,7 +71,7 @@ The website highlights:
 
 ---
 
-## 🧱 Bootstrap Components Used
+## Bootstrap Components Used
 
 | Component | Purpose |
 |------------|----------|
@@ -84,7 +84,7 @@ The website highlights:
 
 ---
 
-## 📱 Responsiveness & Accessibility
+## Responsiveness & Accessibility
 
 - Fully mobile-friendly through Bootstrap’s grid and utility classes  
 - Optimized for desktop, tablet, and mobile devices  
@@ -93,7 +93,7 @@ The website highlights:
 
 ---
 
-## 💡 Milestone 2 Enhancements Summary
+## Milestone 2 Enhancements Summary
 
 | Aspect | Milestone 1 | Milestone 2 Enhancement |
 |--------|--------------|-------------------------|
@@ -104,7 +104,7 @@ The website highlights:
 
 ---
 
-## 🧾 How to Run the Project Locally
+## How to Run the Project Locally
 
 1. **Clone the repository:**
    ```bash
