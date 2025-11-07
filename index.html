@@ -5,149 +5,164 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Atelier Luxury — Timeless Pieces</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Your custom CSS should come after -->
-  <link rel="stylesheet" href="styles/style.css">
-  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <!-- Main stylesheet -->
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="styles/style.css" />
 
-  <!-- meta for nicer sharing -->
-  <meta name="description" content="Atelier Luxury — curated, timeless fashion pieces. A minimalist, elegant product showcase built with HTML & CSS." />
+  <meta name="description" content="Atelier Luxury — curated, timeless fashion pieces. A minimalist, elegant product showcase built with HTML, CSS, and Bootstrap." />
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <!-- replace with images/logo in images/logo.png -->
-        <img src="images/logo.png" alt="Atelier Luxury logo" class="logo" onerror="this.style.display='none'">
-        <a href="#" class="brand-text">Atelier Luxury</a>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-light shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">Atelier Luxury</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#collection">Collection</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
       </div>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#collection" class="nav-link">Collection</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </nav>
     </div>
-  </header>
+  </nav>
 
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <div class="container hero-inner">
-      <div class="hero-copy">
-        <h1>Timeless styling. Authentic pieces.</h1>
-        <p class="lead">Discover curated luxury fashion inspired by craftsmanship and refined living.</p>
-        <a href="#collection" class="btn-cta">Explore Collection</a>
-      </div>
-      <div class="hero-image">
-        <img src="images/hero.jpg" alt="Luxury handbag on display" onerror="this.style.display='none'">
+  <!-- HERO SECTION -->
+  <section id="home" class="py-5 mt-5">
+    <div class="container text-center">
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-lg-start">
+          <h1 class="display-5 fw-bold mb-3">Timeless styling. Authentic pieces.</h1>
+          <p class="lead text-muted mb-4">Discover curated luxury fashion inspired by craftsmanship and refined living.</p>
+          <a href="#collection" class="btn btn-dark btn-lg px-4">Explore Collection</a>
+        </div>
+        <div class="col-lg-6 mt-4 mt-lg-0">
+          <img src="images/hero.jpg" alt="Luxury handbag on display" class="img-fluid rounded" onerror="this.style.display='none'">
+        </div>
       </div>
     </div>
   </section>
 
   <!-- FEATURED COLLECTION -->
-  <section id="collection" class="collection">
-    <div class="container">
-      <h2 class="section-title">Featured Collection</h2>
-      <p class="section-sub">Selected pieces that reflect our timeless aesthetic.</p>
-
-      <div class="grid">
-        <article class="card">
-          <img src="images/bag1.jpg" alt="Classic leather handbag" class="card-img" onerror="this.style.display='none'">
-          <div class="card-body">
-            <h3 class="card-title">Classic Leather Tote</h3>
-            <p class="card-text">Hand-stitched Italian leather, minimal hardware — a timeless everyday companion.</p>
-            <div class="card-meta">
-              <span class="price">₱28,000</span>
-              <a class="btn-outline" href="#contact">Inquire</a>
+  <section id="collection" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">Featured Collection</h2>
+      <p class="text-muted mb-5">Selected pieces that reflect our timeless aesthetic.</p>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="images/bag1.jpg" alt="Classic Leather Tote" class="card-img-top" onerror="this.style.display='none'">
+            <div class="card-body">
+              <h5 class="card-title">Classic Leather Tote</h5>
+              <p class="card-text text-muted">Hand-stitched Italian leather, minimal hardware — a timeless everyday companion.</p>
+              <p class="fw-bold">₱28,000</p>
+              <a href="#contact" class="btn btn-outline-dark">Inquire</a>
             </div>
           </div>
-        </article>
-
-        <article class="card">
-          <img src="images/bag2.jpg" alt="Elegant evening clutch" class="card-img" onerror="this.style.display='none'">
-          <div class="card-body">
-            <h3 class="card-title">Evening Clutch — Serpenti</h3>
-            <p class="card-text">Limited edition. Sculptural silhouette and delicate finish for special evenings.</p>
-            <div class="card-meta">
-              <span class="price">₱45,000</span>
-              <a class="btn-outline" href="#contact">Inquire</a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="images/bag2.jpg" alt="Evening Clutch — Serpenti" class="card-img-top" onerror="this.style.display='none'">
+            <div class="card-body">
+              <h5 class="card-title">Evening Clutch — Serpenti</h5>
+              <p class="card-text text-muted">Limited edition. Sculptural silhouette and delicate finish for special evenings.</p>
+              <p class="fw-bold">₱45,000</p>
+              <a href="#contact" class="btn btn-outline-dark">Inquire</a>
             </div>
           </div>
-        </article>
-
-        <!-- You can duplicate cards as needed -->
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="images/bag3.jpg" alt="Modern Crossbody Bag" class="card-img-top" onerror="this.style.display='none'">
+            <div class="card-body">
+              <h5 class="card-title">Modern Crossbody Bag</h5>
+              <p class="card-text text-muted">A balance of elegance and functionality. Made with sustainable materials.</p>
+              <p class="fw-bold">₱32,000</p>
+              <a href="#contact" class="btn btn-outline-dark">Inquire</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="about">
-    <div class="container">
-      <h2 class="section-title">About Atelier Luxury</h2>
-      <p class="section-sub">Atelier Luxury curates refined pieces with a focus on craftsmanship and authentic materials. Our selections are chosen to complement a life of understated elegance.</p>
-      <ul class="features-list">
-        <li>Curated Collections</li>
-        <li>Focus on Craftsmanship</li>
-        <li>Limited Releases & Pre-orders</li>
-      </ul>
+  <section id="about" class="py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">About Atelier Luxury</h2>
+      <p class="text-muted mb-4 mx-auto" style="max-width: 700px;">
+        Atelier Luxury curates refined pieces with a focus on craftsmanship and authentic materials. Our selections are chosen to complement a life of understated elegance.
+      </p>
+      <div class="row justify-content-center">
+        <div class="col-md-3 mb-3">
+          <div class="p-3 border rounded shadow-sm">Curated Collections</div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <div class="p-3 border rounded shadow-sm">Focus on Craftsmanship</div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <div class="p-3 border rounded shadow-sm">Limited Releases & Pre-orders</div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- CONTACT / INQUIRY -->
-  <section id="contact" class="contact">
+  <!-- CONTACT -->
+  <section id="contact" class="py-5 bg-light">
     <div class="container">
-      <h2 class="section-title">Contact & Inquiries</h2>
-      <p class="section-sub">Interested in a piece or request? Send us a message and we’ll follow up within 48 hours.</p>
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">Contact & Inquiries</h2>
+        <p class="text-muted">Interested in a piece or request? Send us a message and we’ll follow up within 48 hours.</p>
+      </div>
 
-      <form class="contact-form" id="contactForm">
-        <div class="form-row">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" required placeholder="Your full name">
+      <form id="contactForm" class="mx-auto" style="max-width: 600px;">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input id="name" name="name" type="text" class="form-control" required placeholder="Your full name">
         </div>
 
-        <div class="form-row">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required placeholder="you@example.com">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input id="email" name="email" type="email" class="form-control" required placeholder="you@example.com">
         </div>
 
-        <div class="form-row">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4" placeholder="Which piece are you inquiring about?"></textarea>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" name="message" class="form-control" rows="4" placeholder="Which piece are you inquiring about?"></textarea>
         </div>
 
-        <div class="form-row form-actions">
-          <button type="submit" class="btn-cta small">Send Inquiry</button>
-          <button type="reset" class="btn-outline small">Clear</button>
+        <div class="d-flex justify-content-between">
+          <button type="submit" class="btn btn-dark">Send Inquiry</button>
+          <button type="reset" class="btn btn-outline-dark">Clear</button>
         </div>
 
-        <p class="form-note">This form is a UI placeholder — no server required for Milestone 1.</p>
+        <p class="form-text mt-3 text-center text-muted">This form is a UI placeholder — no server required for Milestone 1.</p>
       </form>
     </div>
   </section>
 
- <!-- FOOTER -->
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <p id="footerText">© 2025 Atelier Luxury. All rights reserved.</p>
-    <div class="socials">
-      <a href="#" aria-label="Instagram">Instagram</a>
-      <a href="#" aria-label="Facebook">Facebook</a>
+  <!-- FOOTER -->
+  <footer class="py-4 bg-dark text-light">
+    <div class="container text-center">
+      <p class="mb-1">© 2025 Atelier Luxury. All rights reserved.</p>
+      <div>
+        <a href="#" class="text-light me-3 text-decoration-none">Instagram</a>
+        <a href="#" class="text-light text-decoration-none">Facebook</a>
+      </div>
     </div>
-    <button id="themeToggle" class="btn-outline small">Toggle Dark Mode</button>
-  </div>
-</footer>
+  </footer>
 
-<!-- Link to JS -->
-<script src="scripts/main.js" defer></script>
-<!-- Bootstrap JS (for interactivity) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="scripts/main.js"></script>
 </body>
 </html>
