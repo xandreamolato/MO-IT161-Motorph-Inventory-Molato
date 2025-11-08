@@ -108,4 +108,4 @@ The website highlights:
 
 1. **Clone the repository:**
    ```bash
-   git clone [repository link]
+   git clone [[repository link](https://github.com/xandreamolato/MO-IT161-atelier-luxury-Molato.git)]
